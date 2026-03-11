@@ -15,7 +15,7 @@ const Home = () => {
 	useEffect(() => {
 		const fetchPosts = async () => {
 			try {
-				const response = await fetch('http://localhost:5000/posts');
+				const response = await fetch('http://localhost:3000/posts');
 				if (!response.ok) {
 					throw new Error('Network response foi nos piriquitos :(');
 				}

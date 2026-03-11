@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { useNavigate } from 'react-router-dom';
 
 const PostForm = ({ action, id, title, body, onTitleChange, onBodyChange, onSubmit }) => {
@@ -8,17 +6,14 @@ const PostForm = ({ action, id, title, body, onTitleChange, onBodyChange, onSubm
 	const handleSubmit = async e => {
 		e.preventDefault();
 
-		// Ação DELETE
 		if (action === 'delete') {
-			onSubmit(); // A função handleDelete do componente DeletePost será chamada aqui
+			onSubmit();
 			return;
 		}
 
-		// Lógica para CREATE e UPDATE
-		let url = 'http://localhost:5000/posts';
+		let url = 'http://localhost:3000/posts';
 		let method = action === 'update' ? 'PUT' : 'POST';
 
-		// Se estiver atualizando, adicionamos o ID à URL
 		if (action === 'update') {
 			url += `/${id}`;
 		}
@@ -33,7 +28,7 @@ const PostForm = ({ action, id, title, body, onTitleChange, onBodyChange, onSubm
 			});
 
 			if (response.ok) {
-				navigate('/'); // Navega de volta para o início após a operação
+				navigate('/');
 			} else {
 				console.error(`Failed to ${action} post. Status: ${response.status}`);
 			}

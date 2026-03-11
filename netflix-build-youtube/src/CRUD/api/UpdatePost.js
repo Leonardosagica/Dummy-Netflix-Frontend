@@ -43,8 +43,6 @@ const UpdatePost = () => {
 			const updatedPost = await response.json();
 
 			dispatch({ type: 'UPDATE_POST', payload: updatedPost });
-
-			// Redirecionar para a página principal ou mostrar mensagem de sucesso
 			alert('post atualizado');
 			navigate('/');
 		} catch (error) {
@@ -56,9 +54,3 @@ const UpdatePost = () => {
 };
 
 export default UpdatePost;
-
-/* Neste exemplo, foi adicionado o uso do contexto de post, que foi importado através do usePosts do PostContext. A função usePosts retorna o estado posts e a função dispatch do contexto. O estado posts contém todos os posts, e a função dispatch é usada para enviar a ação de atualização para o reducer.
-
-No useEffect, verificamos se o post já está presente no estado posts do contexto. Se estiver presente, pegamos os dados do post diretamente do estado. Caso contrário, fazemos uma chamada para buscar o post no servidor.
-
-Após a atualização do post, chamamos a função dispatch com a ação UPDATE_POST e o post atualizado como payload. Isso atualiza o estado posts no contexto. */

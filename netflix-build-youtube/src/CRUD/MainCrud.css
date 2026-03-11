@@ -16,19 +16,6 @@ body {
 	background-color: black;
 }
 
-/* #root {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-} */
-
-/* .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 2rem;
-	height: 100%;
-} */
-
 /* =================== BLOG ===================== */
 
 .blog {
@@ -84,7 +71,7 @@ body {
 .blog__post h3 {
 	color: yellow;
 	padding: 1rem 0;
-	max-width: 600px; /* Ajuste conforme necessário */
+	max-width: 600px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;

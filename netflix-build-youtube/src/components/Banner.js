@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import './Banner.css';
 import axios from '../server/axios';
 import requests from '../server/Requests';
-/* import Mylist from '../pages/Mylist'; */
-/* import { useNavigate } from 'react-router-dom'; */
 
 function Banner() {
 	const [movie, setMovie] = useState([]);

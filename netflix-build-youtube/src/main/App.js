@@ -22,7 +22,7 @@ function App() {
 							<Route index element={<HomeScreen />} />
 							<Route path='/pages/Mylist' element={<MyList />} />
 							<Route path='/detail/:id' element={<PageDetail />} />
-							<Route path='/CRUD/MainCrud' element={<MainCrud />} />
+							<Route path='/MainCrud' element={<MainCrud />} />
 							<Route path='/create' element={<CreatePost />} />
 							<Route path='/update/:id' element={<UpdatePost />} />
 							<Route path='/delete/:id' element={<DeletePost />} />

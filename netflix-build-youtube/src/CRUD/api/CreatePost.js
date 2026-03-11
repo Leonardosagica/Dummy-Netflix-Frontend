@@ -1,5 +1,3 @@
-// eslint-disable-next-line react/prop-types
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { usePosts } from '../hooks/usePosts';
@@ -14,7 +12,7 @@ const CreatePost = () => {
 	const handleSubmit = async e => {
 		e.preventDefault();
 		try {
-			const response = await fetch('http://localhost:5000/posts', {
+			const response = await fetch('http://localhost:3000/posts', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -27,7 +25,6 @@ const CreatePost = () => {
 
 			dispatch({ type: 'CREATE_POST', payload: data });
 
-			// Redirecionar para a página principal ou mostrar mensagem de sucesso
 			alert('novo post criado');
 			navigate('/');
 		} catch (error) {
@@ -43,9 +40,3 @@ const CreatePost = () => {
 };
 
 export default CreatePost;
-
-/* Neste exemplo, adicionamos o uso do contexto de post, importado através do usePosts do PostContext. A função usePosts retorna a função dispatch do contexto.
-
-No método handleSubmit, após criar o novo post no servidor, adicionamos o novo post ao estado posts do contexto através da ação ADD_POST e o payload data, que contém os detalhes do novo post.
-
-Em seguida, chamamos a função dispatch com a ação ADD_POST e o payload data. Isso atualiza o estado posts no contexto. */
