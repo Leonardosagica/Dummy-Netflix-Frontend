@@ -16,7 +16,7 @@ The API used was a Public IMDB API, to bring movies banners, info, rate to illus
 To start you need to install npm depedencies:
 npm install
 
-Next, You nedd to select specific paste (sorry for the mess hahaha): 
+Next, You need to select specific paste (sorry for the mess hahaha): 
 cd netflix-build-youtube
 
 Finally, You can start the aplication:
