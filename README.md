@@ -11,3 +11,15 @@ It Was designed with HTML and CSS vanilla, along with Javascript to bring functi
 It was used mainly axios (mixed with fetchs inside)
 The API used was a Public IMDB API, to bring movies banners, info, rate to illustrate my website.
 
+
+## VIEW THE PROJECT WEBSITE
+To start you need to install npm depedencies:
+npm install
+
+Next, You nedd to select specific paste (sorry for the mess hahaha): 
+cd netflix-build-youtube
+
+Finally, You can start the aplication:
+npm start
+
+ENJOY! :)
